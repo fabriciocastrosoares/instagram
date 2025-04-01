@@ -1,70 +1,23 @@
+import Sugestao from "./Sugestao";
+
 export default function Sugestoes(){
+
+  const objetoSugestao = [
+    {usuarioSugestao:"Portogas D'Ace", imagemSugestao : "assets/img/Ace.png"},
+    {usuarioSugestao:"Edward Newgate", imagemSugestao : "assets/img/barba.png"},
+    {usuarioSugestao:"Shanks (O Ruivo)", imagemSugestao : "assets/img/Shanks.png"},
+    {usuarioSugestao:"Nefertari Vivi", imagemSugestao : "assets/img/Vivi.png"},
+    {usuarioSugestao:"Arlong", imagemSugestao : "assets/img/Arlong.png"}  
+  ];  
     return(
         <div class="sugestoes">
           <div class="titulo">
             Sugestões para você
             <div>Ver tudo</div>
           </div>
+          
+          {objetoSugestao.map((obj) => <Sugestao imagemSugestao = {obj.imagemSugestao} usuarioSugestao = {obj.usuarioSugestao}/> )}
 
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/Ace.png" alt="Ace.png"/>
-              <div class="texto">
-                <div class="nome">Portogas D'Ace</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/barba.png" alt="Barba Branca"/>
-              <div class="texto">
-                <div class="nome">Edward Newgate</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/Shanks.png" alt="Shanks" />
-              <div class="texto">
-                <div class="nome">Shanks (O Ruivo)</div>
-                <div class="razao">Novo no Instagram</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/Vivi.png" alt="Vivi"/>
-              <div class="texto">
-                <div class="nome">Nefertari Vivi</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/Arlong.png" alt="Arlong"/>
-              <div class="texto">
-                <div class="nome">Arlong</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
         </div>
     );
 }
