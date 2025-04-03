@@ -175,6 +175,10 @@
   .post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong, .usuario ion-icon, .usuario > img, .conteudo > img {
     cursor: pointer;
   }
+
+  .curtida{
+    color: red;
+  }
   
   .post .conteudo img {
     width: 100%;
@@ -303,5 +307,8 @@
     margin-left: 5px;
     padding-top: 5px;
     color: black;
+  }
+  .conteudo{
+    position: relative;
   }
   

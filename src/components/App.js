@@ -4,7 +4,7 @@ import SideBar from "./SideBar";
 
 export default function App(){
     return(
-        <div class = "root">
+        <div className = "root">
             <Topo/>
               <Corpo>
                 <SideBar/>

@@ -14,8 +14,12 @@ export default function Stories(){
 ];  
 
     return(
-        <div class="stories">
-          {objetoStory.map((obj) => <Story imagem={obj.imagemUsuario} usuario={obj.nomeUsuario}/>)}
+        <div className="stories">
+          {objetoStory.map((obj) => <Story key={obj.nomeUsuario} imagem={obj.imagemUsuario} usuario={obj.nomeUsuario}/>)}
+
+          <div className="setinha">
+            <ion-icon name = "chevron-forward-circle"></ion-icon>
+          </div>
         </div>
     );
 }

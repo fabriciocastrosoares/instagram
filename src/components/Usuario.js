@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-export default function Usuario(){
+export default function Usuario(props){
 
-  const [usuarioInicial, setUsuarioInicial] = useState("Monkey D' Luffy");
-  const [imagem, setImagem] = useState("assets/img/luffy.png")
+  const [usuarioInicial, setUsuarioInicial] = useState(props.usuarioInicial);
+  const [imagem, setImagem] = useState(props.imagem);
 
 
     return(
-      <div class="usuario">
+      <div className="usuario">
       <img onClick = {pedirImagem} src={imagem} alt={usuarioInicial}/>
-      <div class="texto">
+      <div className="texto">
         <span>
           <strong>{usuarioInicial}</strong>
           <ion-icon onClick = {pedirNome} name="pencil"></ion-icon>
@@ -19,13 +19,19 @@ export default function Usuario(){
   );
 
   function pedirNome(){  
-    const novoUsuario = prompt("Qual o seu nome?");
-    setUsuarioInicial(novoUsuario);
+    const novoUsuario = prompt("Qual é o seu nome?");
+    if(novoUsuario !== null && novoUsuario !== undefined && novoUsuario !== ""){
+      setUsuarioInicial(novoUsuario);
+    }
   }
 
   function pedirImagem(){
     const novaImagem = prompt("Insira um link para mudar a foto do usuário");
-    setImagem(novaImagem);
+    if(novaImagem !== null && novaImagem !== undefined && novaImagem !== "" ){
+      setImagem(novaImagem);
+    }
   }
-
 }
+
+
+

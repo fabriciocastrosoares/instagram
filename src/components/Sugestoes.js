@@ -10,14 +10,12 @@ export default function Sugestoes(){
     {usuarioSugestao:"Arlong", imagemSugestao : "assets/img/Arlong.png"}  
   ];  
     return(
-        <div class="sugestoes">
-          <div class="titulo">
+        <div className="sugestoes">
+          <div className="titulo">
             Sugestões para você
             <div>Ver tudo</div>
           </div>
-          
-          {objetoSugestao.map((obj) => <Sugestao imagemSugestao = {obj.imagemSugestao} usuarioSugestao = {obj.usuarioSugestao}/> )}
-
+            {objetoSugestao.map((obj) => <Sugestao key={obj.usuarioSugestao} imagemSugestao = {obj.imagemSugestao} usuarioSugestao = {obj.usuarioSugestao}/> )}
         </div>
     );
 }
